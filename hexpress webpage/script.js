@@ -78,7 +78,10 @@ document.addEventListener('DOMContentLoaded', ()=>{
       for(let i=0;i<pages;i++){
         const b = document.createElement('button');
         b.type = 'button';
+        b.setAttribute('role', 'tab');
         b.setAttribute('aria-label', `Go to slide ${i + 1}`);
+        b.setAttribute('aria-selected', String(i === activeIndex));
+        b.tabIndex = i === activeIndex ? 0 : -1;
         b.addEventListener('click', ()=>{
           activeIndex = i;
           update();
@@ -99,7 +102,12 @@ document.addEventListener('DOMContentLoaded', ()=>{
         : Math.max(0, Math.min(activeIndex, maxIndex));
       const translateX = -index * itemW;
       track.style.transform = `translateX(${translateX}px)`;
-      Array.from(dotsEl.children).forEach((b,i)=>b.classList.toggle('active', i===activeIndex));
+      Array.from(dotsEl.children).forEach((b,i)=>{
+        const isActive = i === activeIndex;
+        b.classList.toggle('active', isActive);
+        b.setAttribute('aria-selected', String(isActive));
+        b.tabIndex = isActive ? 0 : -1;
+      });
     }
 
     prev && prev.addEventListener('click', ()=>{

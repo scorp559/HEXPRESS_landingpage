@@ -2,28 +2,33 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Landing - Hexpress Webpage</title>
   <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@300;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="animation.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to main content</a>
   <header class="site-header">
-    <nav class="nav">
+    <nav class="nav" aria-label="Primary">
       <div class="nav-left" id="site-nav-menu">
         <ul class="nav-list">
-          <li class="nav-item">All conditions</li>
-          <li class="nav-item hidden">Delivery & Returns</li>
-          <li class="nav-item">Support</li>
+          <li><a class="nav-item" href="#categories">All conditions</a></li>
+          <li class="hidden"><a class="nav-item" href="#faq">Delivery & Returns</a></li>
+          <li><a class="nav-item" href="#contact-help">Support</a></li>
         </ul>
       </div>
       <div class="nav-center">
-        <div class="logo">RapidHealth<span class="dot">.</span></div>
+        <a class="logo" href="#top">RapidHealth<span class="dot">.</span></a>
       </div>
       <div class="nav-right">
-        <a href="#" class="icon-btn" aria-label="Search"><img src="assets/search.svg" alt="Search" class="icon"/></a>
-        <a href="#" class="icon-btn" aria-label="User"><img src="assets/user.svg" alt="User" class="icon"/></a>
+        <button type="button" class="icon-btn" aria-label="Search">
+          <img src="assets/search.svg" alt="" class="icon" aria-hidden="true"/>
+        </button>
+        <button type="button" class="icon-btn" aria-label="User account">
+          <img src="assets/user.svg" alt="" class="icon" aria-hidden="true"/>
+        </button>
         <button type="button" class="icon-btn menu-btn" aria-label="Menu" aria-expanded="false" aria-controls="site-nav-menu">
           <span></span>
           <span></span>
@@ -33,15 +38,15 @@
     </nav>
   </header>
 
-  <main>
-    <section class="hero">
+  <main id="main-content">
+    <section class="hero" id="top">
       <div class="container hero-inner">
         <div class="hero-left">
           <h1 class="title">Trusted Online
             Healthcare</h1>
           <p class="subtitle">Access doctor-led consultations, genuine treatments, and discreet delivery. All from the comfort of your home.</p>
           <div class="actions">
-            <a class="btn primary" href="#">Start consultation <span class="arrow"><img src="assets/rightsvg.svg" alt="Arrow"></span></a>
+            <a class="btn primary" href="#contact-help">Start consultation <span class="arrow"><img src="assets/rightsvg.svg" alt="" aria-hidden="true"></span></a>
           </div>
         </div>
         <div class="hero-right">
@@ -51,7 +56,7 @@
     </section>
     
    <!-- Section: features -->
-  <section class="features">
+  <section class="features" id="features">
     <div class="container features-inner">
       <div class="features-header">
         <h2 class="features-title">Healthcare made simple, safe & convenient<span class="dot">.</span></h2>
@@ -78,14 +83,14 @@
           </div>
 
           <div class="features-cta">
-            <a class="btn primary" href="#">Join now <span class="arrow"><img src="assets/rightsvg.svg" alt="Arrow"></span></a>
+            <a class="btn primary" href="#contact-help">Join now <span class="arrow"><img src="assets/rightsvg.svg" alt="" aria-hidden="true"></span></a>
           </div>
         </div>
       </div>
     </div>
   </section>
     <!-- Section: categories -->
-    <section class="categories">
+    <section class="categories" id="categories">
       <div class="container categories-inner">
         <div class="categories-header">
           <h2 class="categories-title">Treatments for men and women<span class="dot">.</span></h2>
@@ -96,42 +101,42 @@
           <div class="panel-large">
             <div class="panel-top">
               <h3>Men's <i>Health</i><span class="dot">.</span></h3>
-              <button class="see-btn" type="button">See all <span aria-hidden="true"><img src="assets/rightb.svg" alt="Arrow"></span></button>
+              <a class="see-btn" href="#products">See all <span aria-hidden="true"><img src="assets/rightb.svg" alt=""></span></a>
             </div>
             <div class="panel-tiles">
-              <div class="tile tile-large"><img class="tile-image-desktop" src="assets/Image (ED Treatment).png" alt="ED Treatment"/><img class="tile-image-mobile" src="assets/Image (ED Treatment)_M.png" alt="ED Treatment"/><span>ED Treatment</span></div>
-              <div class="tile"><img src="assets/Image (Hair Loss).png" alt="Hair Loss"/><span>Hair Loss</span></div>
-              <div class="tile"><img src="assets/testo.png" alt="Testosterone"/><span>Testosterone</span></div>
-              <div class="tile"><img src="assets/lifestyle.png" alt="Lifestyle"/><span>Lifestyle</span></div>
-              <div class="tile"><img src="assets/hormonal.png" alt="Hormonal Health"/><span>Hormonal Health</span></div>
+              <a class="tile tile-large" href="#products"><img class="tile-image-desktop" src="assets/Image (ED Treatment).png" alt="ED Treatment"/><img class="tile-image-mobile" src="assets/Image (ED Treatment)_M.png" alt="ED Treatment"/><span>ED Treatment</span></a>
+              <a class="tile" href="#products"><img src="assets/Image (Hair Loss).png" alt="Hair Loss"/><span>Hair Loss</span></a>
+              <a class="tile" href="#products"><img src="assets/testo.png" alt="Testosterone"/><span>Testosterone</span></a>
+              <a class="tile" href="#products"><img src="assets/lifestyle.png" alt="Lifestyle"/><span>Lifestyle</span></a>
+              <a class="tile" href="#products"><img src="assets/hormonal.png" alt="Hormonal Health"/><span>Hormonal Health</span></a>
             </div>
           </div>
 
           <div class="panel-large">
             <div class="panel-top">
               <h3>Women's <i>Health</i><span class="dot">.</span></h3>
-              <button class="see-btn" type="button">See all <span aria-hidden="true"><img src="assets/rightb.svg" alt="Arrow"></span></button>
+              <a class="see-btn" href="#products">See all <span aria-hidden="true"><img src="assets/rightb.svg" alt=""></span></a>
             </div>
             <div class="panel-tiles">
-              <div class="tile tile-large"><img class="tile-image-desktop" src="assets/Image (Birth Control).png" alt="Birth Control"/><img class="tile-image-mobile" src="assets/Image (Birth Control)_M.png" alt="Birth Control"/><span>Birth Control</span></div>
-              <div class="tile"><img src="assets/SKINCARE.png" alt="Skincare"/><span>Skincare</span></div>
-              <div class="tile"><img src="assets/UTI.png" alt="UTI"/><span>UTI</span></div>
-              <div class="tile"><img src="assets/MP.png" alt="Menopause"/><span>Menopause</span></div>
-              <div class="tile"><img src="assets/Wellness.png" alt="Wellness"/><span>Wellness</span></div>
+              <a class="tile tile-large" href="#products"><img class="tile-image-desktop" src="assets/Image (Birth Control).png" alt="Birth Control"/><img class="tile-image-mobile" src="assets/Image (Birth Control)_M.png" alt="Birth Control"/><span>Birth Control</span></a>
+              <a class="tile" href="#products"><img src="assets/SKINCARE.png" alt="Skincare"/><span>Skincare</span></a>
+              <a class="tile" href="#products"><img src="assets/UTI.png" alt="UTI"/><span>UTI</span></a>
+              <a class="tile" href="#products"><img src="assets/MP.png" alt="Menopause"/><span>Menopause</span></a>
+              <a class="tile" href="#products"><img src="assets/Wellness.png" alt="Wellness"/><span>Wellness</span></a>
             </div>
           </div>
         </div>
       </div>
     </section>
   <!-- Products slider -->
-  <section class="products">
+  <section class="products" id="products">
     <div class="container">
       <div class="products-header">
         <h2 class="products-title">Our popular treatments<span class="dot">.</span></h2>
         <p class="products-sub">Selected for you</p>
       </div>
 
-      <div class="carousel" aria-label="Popular treatments carousel">
+      <div class="carousel" role="region" aria-roledescription="carousel" aria-label="Popular treatments">
         <div class="carousel-viewport">
           <div class="carousel-track">
             <article class="product-card featured-product">
@@ -151,7 +156,7 @@
                   <div class="price">$55.00</div>
                   <p class="delivery-info">Incl. Rx and shipping</p>
                 </div>
-                <a class="product-cta" href="#">Buy now <span class="arrow"><img src="assets/rightb.svg" alt="Arrow"></span></a>
+                <a class="product-cta" href="#contact-help">Buy now <span class="arrow"><img src="assets/rightb.svg" alt="" aria-hidden="true"></span></a>
               </div>
             </article>
 
@@ -172,7 +177,7 @@
                   <div class="price">$69.99</div>
                   <p class="delivery-info">Incl. Rx and shipping</p>
                 </div>
-                <a class="product-cta" href="#">Buy now <span class="arrow"><img src="assets/rightb.svg" alt="Arrow"></span></a>
+                <a class="product-cta" href="#contact-help">Buy now <span class="arrow"><img src="assets/rightb.svg" alt="" aria-hidden="true"></span></a>
               </div>
             </article>
 
@@ -193,7 +198,7 @@
                   <div class="price">$55.00</div>
                   <p class="delivery-info">Incl. Rx and shipping</p>
                 </div>
-                <a class="product-cta" href="#">Buy now <span class="arrow"><img src="assets/rightb.svg" alt="Arrow"></span></a>
+                <a class="product-cta" href="#contact-help">Buy now <span class="arrow"><img src="assets/rightb.svg" alt="" aria-hidden="true"></span></a>
               </div>
             </article>
 
@@ -214,7 +219,7 @@
                   <div class="price">$55.00</div>
                   <p class="delivery-info">Incl. Rx and shipping</p>
                 </div>
-                <a class="product-cta" href="#">Buy now <span class="arrow"><img src="assets/rightb.svg" alt="Arrow"></span></a>
+                <a class="product-cta" href="#contact-help">Buy now <span class="arrow"><img src="assets/rightb.svg" alt="" aria-hidden="true"></span></a>
               </div>
             </article>
             
@@ -225,7 +230,7 @@
     </div>
   </section>
 
-  <section class="testimonials">
+  <section class="testimonials" id="testimonials">
     <div class="container testimonials-inner">
       <div class="testimonials-header">
         <h2 class="testimonials-title">What our customers say<span class="dot">.</span></h2>
@@ -235,12 +240,12 @@
       <div class="trustpilot-strip" aria-label="Trustpilot rating summary">
         <p class="trustpilot-copy">Excellent <strong>4.5/5</strong></p>
         <div class="trustpilot-brand" aria-hidden="true">
-          <span class="trustpilot-star"><img src="assets/star.svg" alt="Star"></span>
+          <span class="trustpilot-star"><img src="assets/star.svg" alt=""></span>
           <span class="trustpilot-name">Trustpilot</span>
         </div>
       </div>
 
-      <div class="testimonials-carousel" aria-label="Customer testimonials slider">
+      <div class="testimonials-carousel" role="region" aria-roledescription="carousel" aria-label="Customer testimonials">
         <div class="testimonials-viewport">
           <div class="testimonials-track">
             <article class="testimonial-card">
@@ -250,7 +255,7 @@
               <div class="testimonial-body">
                 <h3>Prompt and honest</h3>
                 <div class="testimonial-rating" aria-label="5 star review">
-                  <span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span>
+                  <span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span>
                 </div>
                 <p>The response times were fast, they made sure I was satisfied and more importantly they believed me when I told them about the snafu with my delivery going missing.</p>
                 <div class="testimonial-divider"></div>
@@ -265,7 +270,7 @@
               <div class="testimonial-body">
                 <h3>I have always been impressed with RapidHealth.</h3>
                 <div class="testimonial-rating" aria-label="5 star review">
-                  <span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span>
+                  <span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span>
                 </div>
                 <p>My prescriptions have been delivered in a timely manner and clear and specific instructions are included. Helpful staff are available to answer any questions and concerns. I look forward to doing business with RapidHealth in the future.</p>
                 <div class="testimonial-divider"></div>
@@ -280,7 +285,7 @@
               <div class="testimonial-body">
                 <h3>Excellent Service</h3>
                 <div class="testimonial-rating" aria-label="5 star review">
-                  <span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span>
+                  <span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span>
                 </div>
                 <p>Clear advice, quick support, and dependable delivery made the whole process straightforward. The service felt professional from consultation through fulfilment.</p>
                 <div class="testimonial-divider"></div>
@@ -295,7 +300,7 @@
               <div class="testimonial-body">
                 <h3>Rapid health was fast</h3>
                 <div class="testimonial-rating" aria-label="5 star review">
-                  <span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span>
+                  <span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span>
                 </div>
                 <p>Rapid health was fast, safe and efficient. I didn't have to drive 35 miles into town to wait at the doctor's office for 2 hours to have them write me prescription. Then wait another 2 hours to have the prescription filled. It came right to my mailbox. I highly recommended Rapid health.</p>
                 <div class="testimonial-divider"></div>
@@ -310,7 +315,7 @@
               <div class="testimonial-body">
                 <h3>This experience was great</h3>
                 <div class="testimonial-rating" aria-label="5 star review">
-                  <span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span><span><img src="assets/starg.svg" alt="Star"></span>
+                  <span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span><span><img src="assets/starg.svg" alt=""></span>
                 </div>
                 <p>This experience was made great by simply listening to the person/person's and allowing trust to be established. This day and age trust is vary blurred and hard to come by.Please keep up the great work and I'll definitely be recommending this to friends and family</p>
                 <div class="testimonial-divider"></div>
@@ -322,7 +327,7 @@
         </div>
         <div class="testimonials-footer">
           <div class="testimonials-pagination" role="tablist" aria-label="Testimonials pagination"></div>
-          <a class="testimonials-link" href="#" aria-label="More Trustpilot reviews">
+          <a class="testimonials-link" href="#contact-help" aria-label="Contact support for more reviews">
             <span>More Trustpilot reviews</span>
             <span class="testimonials-link-arrow" aria-hidden="true">›</span>
           </a>
@@ -331,7 +336,7 @@
     </div>
   </section>
 
-  <section class="how-it-works">
+  <section class="how-it-works" id="how-it-works">
     <div class="container how-it-works-inner">
       <div class="how-it-works-header">
         <h2 class="how-it-works-title">Order anytime, anywhere<span class="dot">.</span></h2>
@@ -376,7 +381,7 @@
     </div>
   </section>
 
-  <section class="faq-section">
+  <section class="faq-section" id="faq">
     <div class="container faq-inner">
       <div class="faq-header">
         <h2 class="faq-title">Still unsure?</h2>
@@ -385,63 +390,63 @@
 
       <div class="faq-list" aria-label="Frequently asked questions">
         <article class="faq-item is-open">
-          <button class="faq-question" type="button" aria-expanded="true">
+          <button class="faq-question" id="faq-question-1" type="button" aria-expanded="true" aria-controls="faq-answer-1">
             <span>How does RapidHealth work?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
-          <div class="faq-answer">
+          <div class="faq-answer" id="faq-answer-1" role="region" aria-labelledby="faq-question-1">
             <p>Ordering online is simple. Just start with a quick online consultation - it usually takes less than 5 minutes. You'll share a bit about your symptoms, your health history, and basics like your blood pressure and weight. Nothing complicated, just what our clinicians need to make sure you're getting the right care for you.</p>
             <p>After you submit it, one of our partner physicians will review everything and decide whether the treatment is safe and appropriate. If a prescription makes sense for you, your medication will be shipped straight to the address you choose.</p>
           </div>
         </article>
 
         <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
+          <button class="faq-question" id="faq-question-2" type="button" aria-expanded="false" aria-controls="faq-answer-2">
             <span>Do I need a prescription to order?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
-          <div class="faq-answer" hidden>
+          <div class="faq-answer" id="faq-answer-2" role="region" aria-labelledby="faq-question-2" hidden>
             <p>No, you don't need one ahead of time. Your prescription is part of our service. After you complete the quick online consultation, one of our partner physicians will review your info and issue a prescription if it's safe and appropriate.</p>
             <p>Once that's done, we'll send it straight to our pharmacy, and they'll ship your treatment right to your door. Easy, discreet, and stress-free.</p>
           </div>
         </article>
 
         <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
+          <button class="faq-question" id="faq-question-3" type="button" aria-expanded="false" aria-controls="faq-answer-3">
             <span>Is insurance required?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
-          <div class="faq-answer" hidden>
+          <div class="faq-answer" id="faq-answer-3" role="region" aria-labelledby="faq-question-3" hidden>
             <p>No, you don't need insurance to use SpeedyHealth. Just order when you need care, and we'll take it from there.</p>
           </div>
         </article>
 
         <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
+          <button class="faq-question" id="faq-question-4" type="button" aria-expanded="false" aria-controls="faq-answer-4">
             <span>Is the price all-inclusive?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
-          <div class="faq-answer" hidden>
+          <div class="faq-answer" id="faq-answer-4" role="region" aria-labelledby="faq-question-4" hidden>
             <p>Yes, what you see is what you pay. Every SpeedyHealth order includes your online consultation, the prescription if it's right for you, and shipping. No surprise fees, ever. We're all about making things safe, simple, and stress-free for you.</p>
           </div>
         </article>
 
         <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
+          <button class="faq-question" id="faq-question-5" type="button" aria-expanded="false" aria-controls="faq-answer-5">
             <span>Do you ship to all 50 US states?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
-          <div class="faq-answer" hidden>
+          <div class="faq-answer" id="faq-answer-5" role="region" aria-labelledby="faq-question-5" hidden>
             <p>At the moment, we only ship to California, Colorado, Connecticut, Delaware, Florida, Iowa, Maryland, Massachusetts, Michigan, Minnesota, Montana, Nevada, New Hampshire, New Jersey, Oregon, Pennsylvania, Texas, Vermont, Wisconsin and Wyoming. We apologize if your state is not on the list and for any inconvenience that may arise as a result. We hope to expand our services to all 50 states in the future.</p>
           </div>
         </article>
 
         <article class="faq-item">
-          <button class="faq-question" type="button" aria-expanded="false">
+          <button class="faq-question" id="faq-question-6" type="button" aria-expanded="false" aria-controls="faq-answer-6">
             <span>Is ordering online with RapidHealth safe?</span>
             <span class="faq-icon" aria-hidden="true"></span>
           </button>
-          <div class="faq-answer" hidden>
+          <div class="faq-answer" id="faq-answer-6" role="region" aria-labelledby="faq-question-6" hidden>
             <p>Yes, your safety is our top priority. SpeedyHealth is LegitScript-certified for safe, compliant telehealth care. Treatments are reviewed and prescribed by licensed U.S. clinicians.</p>
             <p>We only use trusted U.S. pharmacies and FDA-approved treatments. We follow U.S. privacy and data-security regulations to keep your information safe and confidential.</p>
             <p>Simple, secure, and backed by real medical professionals - that's how online care should feel.</p>
@@ -451,7 +456,7 @@
     </div>
   </section>
 
-  <section class="contact-help">
+  <section class="contact-help" id="contact-help">
     <div class="contact-help-shell">
       <div class="contact-help-media">
         <div class="contact-help-figure">
@@ -461,7 +466,7 @@
         <div class="contact-chat contact-chat-top">
           <p>Hello there, how can I help you today?</p>
           <span class="contact-chat-badge" aria-hidden="true">
-            <img src="assets/Social_icon.svg" alt="Customer support chat illustration" />
+            <img src="assets/Social_icon.svg" alt="" />
          </span> 
 
         </div>
@@ -511,7 +516,7 @@
           </a>
         </div>
 
-        <a class="btn primary contact-help-cta" href="#">Start live chat <span class="arrow"><img src="assets/rightsvg.svg" alt="Arrow"></span></a>
+        <a class="btn primary contact-help-cta" href="#top">Start live chat <span class="arrow"><img src="assets/rightsvg.svg" alt="" aria-hidden="true"></span></a>
       </div>
     </div>
   </section>
