@@ -1,0 +1,16 @@
+{
+  "name": "hexpress-figma-mcp",
+  "version": "0.1.0",
+  "description": "Small MCP-compatible server that proxies Figma API for local development",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "node-fetch": "^2.6.7"
+  }
+}

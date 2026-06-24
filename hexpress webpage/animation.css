@@ -1,0 +1,294 @@
+:root{
+  --primary: #0E3256; 
+  --bg: #f3f5f7;
+  --muted: #59697D;
+  --accent: #EB7171;
+  --cust: #567089;
+  --white: #fff;
+}
+.how-it-works-header > *,.how-card{opacity:0;transform:translateY(30px)}
+.how-it-works-header > *,
+.how-card,
+.how-card::after,
+.how-card-image,
+.how-card-step,
+.how-card-copy h3{transition:opacity .7s ease, transform .7s cubic-bezier(.22,1,.36,1), color .3s ease}
+.how-it-works.is-visible .how-it-works-title,
+.how-it-works.is-visible .how-it-works-sub,
+.how-it-works.is-visible .how-card{opacity:1;transform:translateY(0)}
+.how-it-works.is-visible .how-it-works-sub{transition-delay:150ms}
+.how-it-works.is-visible .how-card:nth-child(1){transition-delay:270ms}
+.how-it-works.is-visible .how-card:nth-child(2){transition-delay:390ms}
+.how-it-works.is-visible .how-card:nth-child(3){transition-delay:510ms}
+
+@media (hover:hover){
+  .nav-item:hover{color:var(--accent)}
+  .logo:hover{transform:translateY(-1px)}
+  .icon-btn:hover{transform:translateY(-2px) scale(1.04);background:#f2f5f8}
+  .btn:hover,
+  .see-btn:hover,
+  .product-cta:hover{transform:translateY(-3px);box-shadow:0 14px 28px rgba(14,50,86,0.16)}
+  .btn.primary:hover{background:#184267}
+  .see-btn:hover{background:#f4f7fa}
+  .product-cta:hover{background:#f7fafc}
+  .btn:hover .arrow,
+  .see-btn:hover span,
+  .product-cta:hover .arrow,
+  .contact-help-cta:hover .arrow{transform:translateX(4px)}
+  .card:hover p{transform:translateY(-1px);box-shadow:0 12px 24px rgba(2,6,23,0.1), 0 22px 40px rgba(2,6,23,0.1)}
+  .panel-tiles .tile:hover,
+  .product-card:hover,
+  .testimonial-card:hover,
+  .faq-item:hover,
+  .contact-icon-card:hover{transform:translateY(-2px);box-shadow:0 18px 36px rgb(2 6 23 / 3%)}
+  .contact-icon-card:hover{background:#f7f9fb}
+  .product-card:hover .product-body h4,
+  .testimonial-card:hover h3,
+  .faq-item:hover .faq-question{color:var(--primary)}
+}
+
+@media (prefers-reduced-motion: reduce){
+  .logo,
+  .nav-item,
+  .icon-btn,
+  .btn,
+  .see-btn,
+  .tile,
+  .card p,
+  .product-card,
+  .product-cta,
+  .testimonial-card,
+  .faq-item,
+  .contact-icon-card,
+  .btn .arrow,
+  .reveal-on-scroll,
+  .how-it-works-header > *,
+  .how-card,
+  .how-card::after,
+  .how-card-image,
+  .how-card-step,
+  .how-card-copy h3{transition:none !important;transform:none !important;animation:none !important;opacity:1 !important}
+}
+
+.btn {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 14px 28px;
+  border-radius: 999px;
+  background: #123b67;
+  color: #fff;
+  text-decoration: none;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+  box-shadow: 0 4px 12px rgba(18, 59, 103, 0.2);
+}
+
+.btn::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #123b67, #1b4f87);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  border-radius: inherit;
+  z-index: 0;
+}
+
+.btn>* {
+  position: relative;
+  z-index: 1;
+  color: inherit;
+}
+
+.btn svg {
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 10px 24px rgba(18, 59, 103, 0.35);
+}
+
+.btn:hover::before {
+  opacity: 0.2;
+}
+
+.btn:hover svg {
+  transform: translateX(4px);
+}
+
+.btn:active {
+  transform: translateY(-1px);
+}
+
+/* Card Hover Effect */
+.how-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+}
+
+.how-card-image {
+  transition: transform 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+  transform-origin: center;
+}
+
+.how-card-step {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: #fff;
+  color: #123b67;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  font-weight: 700;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.how-card:hover {
+  transform: translateY(-4px);
+}
+
+.how-card:hover .how-card-image {
+  transform: scale(1.1);
+}
+
+.how-card:hover .how-card-step {
+  background: #123b67;
+  color: #fff;
+  transform: scale(1.1);
+  box-shadow: 0 8px 20px rgba(18, 59, 103, 0.25);
+}
+
+/* Tile Image Hover */
+.tile {
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.tile img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.tile:hover img {
+  transform: scale(1.04);
+}
+
+/* See All Button Hover */
+.see-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: #fff;
+  color: #123b67;
+  border: none;
+  border-radius: 999px;
+  padding: 12px 24px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.see-btn img {
+  transition: transform 0.3s ease;
+}
+
+.see-btn:hover {
+  background: #123b67;
+  color: #fff;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.see-btn:hover img {
+  transform: translateX(4px);
+  filter: brightness(0) invert(1);
+}
+
+/* Product Card Hover */
+.product-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.product-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Product Image Zoom */
+.product-visual {
+  overflow: hidden;
+}
+
+.product-visual img {
+  transition: transform 0.5s ease;
+}
+
+.product-card:hover .product-visual img {
+  transform: scale(1.08);
+}
+
+/* Buy Button Hover */
+.product-cta {
+  transition: all 0.3s ease;
+}
+
+.product-cta .arrow img {
+  transition: transform 0.3s ease;
+}
+
+.product-cta:hover {
+  background: #123b67;
+  color: #fff;
+}
+
+.product-cta:hover .arrow img {
+  transform: translateX(4px);
+  filter: brightness(0) invert(1);
+}
+
+/* Testimonial Card Hover */
+.testimonial-card {
+  transition:
+    transform 0.35s ease,
+    box-shadow 0.35s ease;
+  overflow: hidden;
+}
+
+.testimonial-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.12);
+}
+
+/* Image Zoom */
+.testimonial-visual {
+  overflow: hidden;
+}
+
+.testimonial-visual img {
+  transition: transform 0.5s ease;
+}
+
+.testimonial-card:hover .testimonial-visual img {
+  transform: scale(1.08);
+}
+
+/* Title Color Change */
+.testimonial-body h3 {
+  transition: color 0.3s ease;
+}
+
+.testimonial-card:hover .testimonial-body h3 {
+  color: #123b67;
+}
