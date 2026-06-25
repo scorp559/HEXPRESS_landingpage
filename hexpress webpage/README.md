@@ -133,6 +133,26 @@ When adjusting motion, prefer:
 
 Avoid animating layout-heavy properties unless there is a clear reason.
 
+## Web Accessibility
+
+When updating the landing page, keep these accessibility requirements in mind:
+
+- Use semantic HTML elements where possible so screen readers can identify the page structure correctly.
+- Preserve heading order and avoid skipping heading levels when adding new sections.
+- Ensure all interactive elements are reachable and usable with keyboard navigation.
+- Provide meaningful `alt` text for informative images and use empty `alt` attributes only for decorative images.
+- Maintain sufficient color contrast for text, buttons, and focus states.
+- Do not rely on motion alone to communicate meaning, and keep reduced-motion users in mind when adding new effects.
+- Verify that form fields, buttons, and navigation controls have clear accessible names.
+
+Recommended checks after UI changes:
+
+- tab through the page and confirm visible focus states
+- test responsive layouts without hiding important content from keyboard users
+- review image and icon usage for missing or incorrect `alt` text
+
+
+
 ## Editing Notes
 
 - Most visual changes can be handled in `styles.css`.
